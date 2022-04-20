@@ -1,4 +1,5 @@
 export async function onRequest(context) {
-    const myValue = await context.env.Testing.get('LLAVE')
-    return new Response(myValue)
+    const res = await context.env
+    const nose = JSON.stringify(res)
+    return new Response(nose)
 }
