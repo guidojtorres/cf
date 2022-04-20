@@ -2,7 +2,7 @@ const errorHandler = async ({next}) => {
     try {
         return await next();
     } catch (e) {
-        return new Response(`${e.message} \n ${e.stack}`, {status:500})
+        return new Response(`${e.message} \n ${e.stack} hola 1234567810`, {status:500})
     }
 }
 
