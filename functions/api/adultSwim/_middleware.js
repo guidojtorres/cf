@@ -1,8 +1,10 @@
 const errorHandler = async ({next}) => {
     try {
+        // esperando a que termine la proxima funcion
         return await next();
     } catch (e) {
-        return new Response(`${e.message} \n ${e.stack} hola 1234567810`, {status:500})
+        // atrapar y reportar errores mientras se corre la proxima funcion
+        return new Response(`${e.message} \n ${e.stack}`, {status:500})
     }
 }
 
